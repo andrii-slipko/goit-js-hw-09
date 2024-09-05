@@ -41,7 +41,8 @@ form.addEventListener('input', (event) => {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-
+    formData.email = formData.email.trim();
+    formData.message = formData.message.trim();
     if (formData.email === '' || formData.message === '') {
         alert('Fill please all fields');
     } else {
